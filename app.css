@@ -1,0 +1,15 @@
+
+main {
+    display: flex; /* Use a flex layout for the main container */
+}
+
+#list {
+    background-color: rgb(125, 125, 170); /* Set the background color of the list element */
+    flex: 3; /* The list element will take up 3 times more space than the form element */
+    height: 100vh; /* Set the height of the list element to the full viewport height */
+}
+
+#form {
+    background-color: rgb(143, 98, 98); /* Set the background color of the form element */
+    flex: 2; /* The form element will take up 2 times more space than a flex item with flex: 1 */
+}
