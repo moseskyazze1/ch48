@@ -1,15 +1,59 @@
 
+
+
+
+
+/* Body styling for consistent background and typography */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0; /* Light gray background */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+/* Flexbox layout for the main container */
 main {
-    display: flex; /* Use a flex layout for the main container */
+    display: flex;
+    justify-content: center; /* Center align flex items horizontally */
+    align-items: center; /* Center align flex items vertically */
+    height: 100vh; /* Full viewport height */
 }
 
+/* Styling for the list element */
 #list {
-    background-color: rgb(125, 125, 170); /* Set the background color of the list element */
-    flex: 3; /* The list element will take up 3 times more space than the form element */
-    height: 100vh; /* Set the height of the list element to the full viewport height */
+    background-color: #5e81ac; /* Steel blue background */
+    flex: 3; /* Takes up 3 times more space than #form */
+    height: 100%; /* Full height of parent (main) */
+    padding: 20px; /* Padding for content */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+    border-radius: 10px; /* Rounded corners */
 }
 
+/* Styling for the form element */
 #form {
-    background-color: rgb(143, 98, 98); /* Set the background color of the form element */
-    flex: 2; /* The form element will take up 2 times more space than a flex item with flex: 1 */
+    background-color: #bf616a; /* Salmon pink background */
+    flex: 2; /* Takes up 2 times more space than #list */
+    height: 100%; /* Full height of parent (main) */
+    padding: 20px; /* Padding for content */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* General styles for both #list and #form */
+#list, #form {
+    color: #eceff4; /* Light text color */
+    text-align: center; /* Center align text */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column; /* Stack flex items vertically on smaller screens */
+        padding: 20px; /* Add padding around the main container */
+    }
+
+    #list, #form {
+        flex: auto; /* Allow each item to grow equally */
+        margin-bottom: 20px; /* Add spacing between items */
+    }
 }
